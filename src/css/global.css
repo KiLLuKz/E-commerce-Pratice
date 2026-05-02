@@ -1,0 +1,8 @@
+:root {
+  --primary-color: #7700e6;
+  --bg-dark: #1a1a1a; 
+  --text-white: #ffffff;
+  --primary-gradient: linear-gradient(135deg, #7700e6 0%, #a855f7 100%);
+  --secondary-color: #9c32ff;
+  --border-radius: 8px;
+}

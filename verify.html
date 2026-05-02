@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/auth.css">
+    <title>e-commerce</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="auth-card">
+            <header class="auth-header">
+                <h1 id="auth-title">ยืนยันอีเมล</h1>
+                <p style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 0.5rem;">
+                    กรุณากรอกรหัส 6 หลักที่ส่งไปยังอีเมลของคุณ
+                </p>
+            </header>
+
+            <!-- ส่วนของ OTP Input -->
+            <div class="otp-container">
+                <input type="text" class="otp-input" maxlength="1" pattern="\d*" inputmode="numeric">
+                <input type="text" class="otp-input" maxlength="1" pattern="\d*" inputmode="numeric">
+                <input type="text" class="otp-input" maxlength="1" pattern="\d*" inputmode="numeric">
+                <input type="text" class="otp-input" maxlength="1" pattern="\d*" inputmode="numeric">
+                <input type="text" class="otp-input" maxlength="1" pattern="\d*" inputmode="numeric">
+                <input type="text" class="otp-input" maxlength="1" pattern="\d*" inputmode="numeric">
+            </div>
+
+            <button type="button" id="verify-btn" class="btn-primary">ยืนยันรหัส</button>
+            <button type="button" id="resend-btn" class="btn-secondary">ส่งรหัสยืนยันใหม่</button>
+        </div>
+    </div>
+
+    <div id="custom-popup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <span id="popup-icon">❌</span>
+            <p id="popup-message">ข้อความแจ้งเตือน</p>
+            <button id="close-popup">ตกลง</button>
+        </div>
+    </div>
+    <script type="module" src="src/js/auth.js"></script>
+</body>
+
+</html>

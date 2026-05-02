@@ -1,12 +1,78 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>e-commerce</title>
-  </head>
-  <body>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/auth.css">
+  <title>e-commerce</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="auth-card">
+      <!-- ส่วนหัว (Logo / Title) -->
+      <header class="auth-header">
+        <h1 id="auth-title">เข้าสู่ระบบ</h1>
+      </header>
+
+      <!-- ฟอร์มเข้าสู่ระบบ -->
+      <form id="login-form" class="auth-form">
+        <!-- กลุ่ม Email -->
+        <div class="form-group">
+          <label for="login-email">อีเมล</label>
+          <input type="email" id="login-email" placeholder="example@gmail.com" required>
+          <span id="email-error" class="error-text hidden">รูปแบบอีเมลไม่ถูกต้อง</span>
+        </div>
+        <!-- กลุ่ม Password -->
+        <div class="form-group">
+          <label for="login-password">รหัสผ่าน</label>
+          <input type="password" id="login-password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Login</button>
+        <p>ยังไม่มีบัญชี? <a href="#" id="to-register">สมัครใหม่</a></p>
+      </form>
+
+      <!-- ฟอร์มสมัครสมาชิก (ซ่อนไว้ก่อน) -->
+      <!-- ฟอร์มสมัครสมาชิก -->
+      <form id="register-form" class="auth-form hidden">
+        <div class="form-group">
+          <label>ชื่อผู้ใช้งาน</label>
+          <input type="text" id="reg-username" placeholder="Username" required>
+        </div>
+
+        <div class="form-group">
+          <label>อีเมล</label>
+          <input type="email" id="reg-email" placeholder="example@gmail.com" required>
+          <span id="reg-email-error" class="error-text hidden">รูปแบบอีเมลไม่ถูกต้อง</span>
+        </div>
+
+        <div class="form-group">
+          <label>รหัสผ่าน (อย่างน้อย 8 ตัว)</label>
+          <input type="password" id="reg-password" placeholder="••••••••" minlength="8" required>
+        </div>
+
+        <div class="form-group">
+          <label>ยืนยันรหัสผ่าน</label>
+          <input type="password" id="reg-confirm-password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Register</button>
+        <p>มีบัญชีอยู่แล้ว? <a href="#" id="to-login">เข้าสู่ระบบ</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="custom-popup" class="popup-overlay hidden">
+    <div class="popup-content">
+      <span id="popup-icon">❌</span>
+      <p id="popup-message">ข้อความแจ้งเตือน</p>
+      <button id="close-popup">ตกลง</button>
+    </div>
+  </div>
+  <script type="module" src="src/js/auth.js"></script>
+</body>
+
 </html>

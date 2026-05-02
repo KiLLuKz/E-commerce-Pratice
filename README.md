@@ -1,6 +1,6 @@
-
 ```
 E-commerce
+├─ README.md
 ├─ index.html
 ├─ package-lock.json
 ├─ package.json
@@ -12,8 +12,8 @@ E-commerce
    │  ├─ hero.png
    │  ├─ javascript.svg
    │  └─ vite.svg
-   ├─ counter.js
-   ├─ main.js
-   └─ style.css
+   ├─ auth.js
+   ├─ login.css
+   └─ main.js
 
 ```
